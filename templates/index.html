@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Rock Paper Scissors 🔥</h1>
+    <div>
+        <button onclick="setMode('1-player')">1 Player</button>
+        <button onclick="setMode('2-player')">2 Player</button>
+        <button onclick="setMode('computer')">Computer vs Computer</button>
+    </div>
+
+    <div class="game-container">
+        <div class="choices">
+            <div class="choice" onclick="play('rock')">🪨 Rock</div>
+            <div class="choice" onclick="play('paper')">📄 Paper</div>
+            <div class="choice" onclick="play('scissor')">✂️ Scissor</div>
+        </div>
+        <div id="score">P1: 0 | P2: 0 | Round: 0/10</div>
+        <div id="winner-message"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
