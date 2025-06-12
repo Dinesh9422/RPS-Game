@@ -41,4 +41,5 @@ def get_result(p1, p2):
     return 'player2'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+   app.run(host='0.0.0.0', port=10000)
+
